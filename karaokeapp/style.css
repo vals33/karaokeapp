@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(270deg, #ff416c, #1cb5e0, #ff416c);
+  background-size: 600% 600%;
+  animation: gradientBG 20s ease infinite;
+  overflow: hidden;
+  color: #fff;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.lyrics-container {
+  width: 80%;
+  max-width: 600px;
+  height: 60vh;
+  overflow: hidden;
+  position: relative;
+  border-radius: 16px;
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.7);
+}
+
+.lyrics {
+  position: absolute;
+  width: 100%;
+  line-height: 2em;
+  font-size: 1.3em;
+  top: 0;
+  transition: transform 0.5s ease-out;
+  text-align: center;
+}
+
+.word {
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.highlight {
+  color: #1db954;
+  font-weight: bold;
+  text-shadow: 0 0 8px #1db954, 0 0 12px #1db954;
+  transform: scale(1.2);
+}
